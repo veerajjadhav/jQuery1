@@ -17,5 +17,25 @@
         $( this ).next().slideDown( 200 );
         $( this ).next().siblings( 'dd' ).slideUp( 200 );
     } );
+//////////////////////append,prepend,after/////////////////////
+    $( '<h2></h2>', {
+        text: 'helloo form jQuery',
+        class: 'text-capitalize'
+    } ).insertAfter( 'h1' );
 
+    $( 'P' ).eq( 1 ).after( function () {
+        return $( this ).prevUntil( 'h1' );
+    } );
+//////////to prepend a bockquote//////////////////////////////
+
+
+    var co = $( 'span.co' );
+    co.each( function () {
+        $( '<blockquote></blockquote>', {
+            class: 'co',
+            text: $( this ).text()
+
+        } ).prependTo( $( this ).closest( 'p' ) );
+    } );
 } )();
+
