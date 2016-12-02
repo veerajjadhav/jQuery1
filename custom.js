@@ -32,7 +32,7 @@
     var co = $( 'span.co' );
     co.each( function () {
         $( '<blockquote></blockquote>', {
-            class: 'co',
+            class: 'co1',
             text: $( this ).text()
 
         } ).prependTo( $( this ).closest( 'p' ) );
